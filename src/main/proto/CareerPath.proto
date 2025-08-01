@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "generated.grpc.CareerPath";
+option java_outer_classname = "CareerPathImpl";
+
+package qualityeducation;
+
+// CareerPath service definition
+service CareerPathService {
+  rpc SuggestCareerPaths(CareerPathRequest) returns (stream CareerPathResponse);
+}
+
+// Request message for SuggestCareerPaths
+message CareerPathRequest {
+  string student_name = 1;
+  repeated SubjectGrade grades = 2;
+}
+
+// Represents a grade in a specific subject
+message SubjectGrade {
+  string subject = 1;
+  double score = 2;
+}
+
+// Server streaming response with a career path suggestion
+message CareerPathResponse {
+  string career_path = 1;
+}
