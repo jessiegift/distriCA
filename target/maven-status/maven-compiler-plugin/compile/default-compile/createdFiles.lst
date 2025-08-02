@@ -16,6 +16,7 @@ generated\grpc\CareerPath\CareerPathServiceGrpc$CareerPathServiceBaseDescriptorS
 generated\grpc\GradeReport\GradeReportResponseOrBuilder.class
 generated\grpc\Subject\SubjectServiceGrpc$SubjectServiceBaseDescriptorSupplier.class
 generated\grpc\Subject\SubjectServiceGrpc$1.class
+QualityEducationCA\MyEduServer.class
 generated\grpc\GradeReport\GradeReportServiceGrpc$GradeReportServiceStub.class
 generated\grpc\GradeReport\GradeReportRequest$Builder.class
 generated\grpc\GradeReport\GradeReportServiceGrpc.class
@@ -38,6 +39,8 @@ generated\grpc\GradeReport\GradeReportServiceGrpc$GradeReportServiceBaseDescript
 generated\grpc\CareerPath\SubjectGrade$1.class
 generated\grpc\Subject\SubjectPerformance$1.class
 generated\grpc\CareerPath\CareerPathImpl$1.class
+QualityEducationCA\QualityEduClient$1.class
+QualityEducationCA\MyEduServer$1.class
 generated\grpc\GradeReport\GradeReportImpl$1.class
 generated\grpc\Subject\SubjectFeedback$1.class
 generated\grpc\CareerPath\CareerPathRequest$1.class
@@ -56,6 +59,7 @@ generated\grpc\GradeReport\GradeReportServiceGrpc$GradeReportServiceBlockingStub
 generated\grpc\Subject\SubjectFeedback.class
 generated\grpc\GradeReport\GradeReportRequestOrBuilder.class
 generated\grpc\GradeReport\GradeReportServiceGrpc$GradeReportServiceImplBase.class
+QualityEducationCA\MyEduServer$2.class
 generated\grpc\CareerPath\CareerPathServiceGrpc$CareerPathServiceStub.class
 generated\grpc\CareerPath\CareerPathImpl.class
 generated\grpc\CareerPath\CareerPathServiceGrpc$MethodHandlers.class

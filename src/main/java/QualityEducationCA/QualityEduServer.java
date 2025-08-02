@@ -31,24 +31,33 @@ public class QualityEduServer {
             .build()
             .start();
        logger.info("Server started on port " + port);
-        
-       JmDNS jmdns = JmDNS.create(InetAddress.getLocalHost());
+       JmDNS jmdns = null;
+    try {
+        jmdns = JmDNS.create(InetAddress.getLocalHost());
 
-        // Register each service individually
         registerService(jmdns, "CareerPathService", port, "path=career");
         registerService(jmdns, "SubjectService", port, "path=subject");
         registerService(jmdns, "GradeReportService", port, "path=grade");
 
-        // Keep server running
-        server.awaitTermination();
+    } catch (IOException e) {
+        logger.severe("Failed to register service with JmDNS: " + e.getMessage());
     }
+
+    server.awaitTermination();
+
+    if (jmdns != null) {
+        jmdns.close();
+    }
+   }
 
     private static void registerService(JmDNS jmdns, String serviceName, int port, String path) throws IOException {
         ServiceInfo serviceInfo = ServiceInfo.create("_grpc._tcp.local.", serviceName, port, path);
         jmdns.registerService(serviceInfo);
         System.out.println(serviceName + " registered via JmDNS on port " + port);
     }
- }
+  }
+
+
 
 
                 
