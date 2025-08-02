@@ -1,18 +1,15 @@
 /*
  * Created by Onyinye Gift Anueyiagu
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
 package QualityEducationCA;
-import java.io.IOException;
 
 /**
  *
- * @author admin
+ * @author Onyinye
  */
-public class MyEduServer {
+public class QualityEduServer {
 
-    public static void main(String[] a.
-    }
 }
- 
