@@ -7,7 +7,7 @@
 package QualityEducationCA;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
-
+import java.util.logging.Logger;
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -21,6 +21,7 @@ import javax.jmdns.ServiceInfo;
  * @author Onyinye
  */
 public class QualityEduServer {
+    private static final Logger logger = Logger.getLogger(QualityEduServer.class.getName());
     public static void main(String[] args) throws IOException,InterruptedException {
         int port = 50051;
         Server server = ServerBuilder.forPort(50051)
@@ -29,7 +30,7 @@ public class QualityEduServer {
             .addService(new GradeReportServiceImpl())    // From GradeServiceImpl.java
             .build()
             .start();
-        System.out.println("Server started on port 50051");
+       logger.info("Server started on port " + port);
         
        JmDNS jmdns = JmDNS.create(InetAddress.getLocalHost());
 
