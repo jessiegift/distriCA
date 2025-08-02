@@ -12,6 +12,7 @@ import generated.grpc.CareerPath.CareerPathResponse;
 import generated.grpc.CareerPath.CareerPathServiceGrpc;
 import generated.grpc.CareerPath.SubjectGrade;
 import java.util.List;
+import java.util.logging.Logger;
 import io.grpc.stub.StreamObserver;
 
 
@@ -20,9 +21,10 @@ import io.grpc.stub.StreamObserver;
  * @author Onyinye
  */
 public class CareerPathServiceImpl extends CareerPathServiceGrpc.CareerPathServiceImplBase { 
+     private static final Logger logger = Logger.getLogger(CareerPathServiceImpl.class.getName());
     public void SuggestCareerPaths(CareerPathRequest request, StreamObserver<CareerPathResponse> responseObserver) {
        
-        System.out.println("Received request for: " + request.getStudentName());
+        logger.info("Received request for student: " + request.getStudentName());
 
         List<SubjectGrade> grades = request.getGradesList();
 

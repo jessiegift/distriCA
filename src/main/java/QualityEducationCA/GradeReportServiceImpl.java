@@ -13,6 +13,7 @@ import generated.grpc.GradeReport.GradeReportServiceGrpc;
 import java.util.Map;
 import io.grpc.stub.StreamObserver;
 import java.util.ArrayList;
+import java.util.logging.Logger;
 
 
 
@@ -21,6 +22,7 @@ import java.util.ArrayList;
  * @author Onyinye
  */
 public class GradeReportServiceImpl extends GradeReportServiceGrpc.GradeReportServiceImplBase {
+    private static final Logger logger = Logger.getLogger(GradeReportServiceImpl.class.getName());
         //unary RPC
     // Simple in-memory map of student names to grades
     private static final Map<String, String> studentGrades = Map.of(
@@ -33,7 +35,7 @@ public class GradeReportServiceImpl extends GradeReportServiceGrpc.GradeReportSe
     @Override
     public void getGradeReport(GradeReportRequest request, StreamObserver<GradeReportResponse> responseObserver) {
         String studentName = request.getStudentName();
-
+        logger.info("Received grade report request for student: " + studentName);
         // Lookup grade from the map; if not found, return a default message
         String grade = studentGrades.getOrDefault(studentName, "Grade not found");
 
@@ -56,13 +58,14 @@ public class GradeReportServiceImpl extends GradeReportServiceGrpc.GradeReportSe
 
         @Override
         public void onNext(AssessmentScore request) {
-            System.out.println("Received score: " + request.getScore());
+            int score = request.getScore();
+            logger.info("Received score: " + score);
             scores.add(request.getScore());
         }
 
         @Override
         public void onError(Throwable t) {
-            t.printStackTrace();
+            logger.severe("Error receiving assessment scores: " + t.getMessage());
         }
 
         @Override
@@ -91,6 +94,7 @@ public class GradeReportServiceImpl extends GradeReportServiceGrpc.GradeReportSe
             } else {
                 finalGrade = "F";
             }
+             logger.info("Final grade calculated: " + finalGrade);
 
             GradeReportResponse response = GradeReportResponse.newBuilder()
                                             .setGrade(finalGrade)

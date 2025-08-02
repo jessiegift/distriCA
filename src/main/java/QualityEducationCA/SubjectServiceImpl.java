@@ -9,6 +9,7 @@ import generated.grpc.Subject.SubjectFeedback;
 import generated.grpc.Subject.SubjectPerformance;
 import generated.grpc.Subject.SubjectImpl;
 import generated.grpc.Subject.SubjectServiceGrpc;
+import java.util.logging.Logger;
 import io.grpc.stub.StreamObserver;
 
 
@@ -17,6 +18,7 @@ import io.grpc.stub.StreamObserver;
  * @author Onyinye
  */
 public class SubjectServiceImpl extends SubjectServiceGrpc.SubjectServiceImplBase  {
+    private static final Logger logger = Logger.getLogger(SubjectServiceImpl.class.getName());
     @Override
     public StreamObserver<SubjectPerformance> monitorSubjectPerformance(StreamObserver<SubjectFeedback> responseObserver) {
         return new StreamObserver<SubjectPerformance>() {
@@ -28,7 +30,7 @@ public class SubjectServiceImpl extends SubjectServiceGrpc.SubjectServiceImplBas
                 int score = request.getSubjectScore();
                 String quizName = request.getQuizName();
 
-                System.out.println("Received quiz: " + quizName + " for subject: " + subject + " with score: " + score);
+               logger.info("Received quiz: " + quizName + " for subject: " + subject + " with score: " + score + " from student: " + studentName);
 
                 String progress;
                 String recommendation;
@@ -64,12 +66,12 @@ public class SubjectServiceImpl extends SubjectServiceGrpc.SubjectServiceImplBas
 
             @Override
             public void onError(Throwable t) {
-                System.err.println("Error in SubjectPerformance stream: " + t.getMessage());
+               logger.severe("Error in SubjectPerformance stream: " + t.getMessage());
             }
 
             @Override
             public void onCompleted() {
-                System.out.println("SubjectPerformance stream completed.");
+                  logger.info("SubjectPerformance stream completed.");
                 responseObserver.onCompleted();
             }
         };

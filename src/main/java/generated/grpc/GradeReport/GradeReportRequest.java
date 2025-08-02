@@ -508,10 +508,6 @@ private static final long serialVersionUID = 0L;
 
 
     // @@protoc_insertion_point(builder_scope:qualityeducation.GradeReportRequest)
-
-        public Object getGrade(String string) {
-            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        }
   }
 
   // @@protoc_insertion_point(class_scope:qualityeducation.GradeReportRequest)
