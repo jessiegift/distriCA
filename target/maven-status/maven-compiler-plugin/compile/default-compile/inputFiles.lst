@@ -1,8 +1,10 @@
 C:\Users\admin\Desktop\NCI\Distributed system\CA\distiCA\src\main\java\generated\grpc\Subject\SubjectFeedbackOrBuilder.java
+C:\Users\admin\Desktop\NCI\Distributed system\CA\distiCA\src\main\java\QualityEducationCA\GradeReportClient.java
 C:\Users\admin\Desktop\NCI\Distributed system\CA\distiCA\src\main\java\generated\grpc\Subject\SubjectPerformanceOrBuilder.java
 C:\Users\admin\Desktop\NCI\Distributed system\CA\distiCA\src\main\java\generated\grpc\CareerPath\CareerPathRequest.java
 C:\Users\admin\Desktop\NCI\Distributed system\CA\distiCA\src\main\java\generated\grpc\Subject\SubjectFeedback.java
 C:\Users\admin\Desktop\NCI\Distributed system\CA\distiCA\src\main\java\generated\grpc\CareerPath\CareerPathRequestOrBuilder.java
+C:\Users\admin\Desktop\NCI\Distributed system\CA\distiCA\src\main\java\QualityEducationCA\CareerClient.java
 C:\Users\admin\Desktop\NCI\Distributed system\CA\distiCA\src\main\java\generated\grpc\GradeReport\GradeReportResponse.java
 C:\Users\admin\Desktop\NCI\Distributed system\CA\distiCA\src\main\java\generated\grpc\GradeReport\GradeReportImpl.java
 C:\Users\admin\Desktop\NCI\Distributed system\CA\distiCA\src\main\java\generated\grpc\Subject\SubjectPerformance.java
@@ -25,4 +27,3 @@ C:\Users\admin\Desktop\NCI\Distributed system\CA\distiCA\src\main\java\QualityEd
 C:\Users\admin\Desktop\NCI\Distributed system\CA\distiCA\src\main\java\generated\grpc\CareerPath\SubjectGrade.java
 C:\Users\admin\Desktop\NCI\Distributed system\CA\distiCA\src\main\java\generated\grpc\CareerPath\SubjectGradeOrBuilder.java
 C:\Users\admin\Desktop\NCI\Distributed system\CA\distiCA\src\main\java\generated\grpc\Subject\SubjectServiceGrpc.java
-C:\Users\admin\Desktop\NCI\Distributed system\CA\distiCA\src\main\java\QualityEducationCA\MyEduServer.java

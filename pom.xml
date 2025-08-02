@@ -6,6 +6,8 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
      <dependencies>
+         
+         
         <dependency>
             <groupId>com.google.protobuf</groupId>
             <artifactId>protobuf-java</artifactId>
@@ -115,6 +117,15 @@
                 </executions>
             </plugin>
 
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <mainClass>QualityEduServer</mainClass> <!-- Change this if your main class is in a package -->
+                </configuration>
+            </plugin>
  
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

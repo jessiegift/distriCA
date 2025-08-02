@@ -20,9 +20,10 @@ import io.grpc.stub.StreamObserver;
  *
  * @author Onyinye
  */
-public class CareerPathServiceImpl extends CareerPathServiceGrpc.CareerPathServiceImplBase { 
+public class CareerPathServiceImpl extends CareerPathServiceImplBase { 
      private static final Logger logger = Logger.getLogger(CareerPathServiceImpl.class.getName());
-    public void SuggestCareerPaths(CareerPathRequest request, StreamObserver<CareerPathResponse> responseObserver) {
+     @Override
+     public void suggestCareerPaths(CareerPathRequest request, StreamObserver<CareerPathResponse> responseObserver) {
        
         logger.info("Received request for student: " + request.getStudentName());
 
