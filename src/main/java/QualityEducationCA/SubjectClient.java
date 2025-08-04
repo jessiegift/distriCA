@@ -52,14 +52,14 @@ public class SubjectClient {
 
         // Send multiple SubjectPerformance messages asynchronously
         requestObserver.onNext(SubjectPerformance.newBuilder()
-                .setStudentName("John Doe")
+                .setStudentName("mary smith")
                 .setSubject("Math")
                 .setQuizName("Quiz 1")
                 .setSubjectScore(85)
                 .build());
 
         requestObserver.onNext(SubjectPerformance.newBuilder()
-                .setStudentName("John Doe")
+                .setStudentName("maria lynn")
                 .setSubject("Science")
                 .setQuizName("Quiz 1")
                 .setSubjectScore(90)

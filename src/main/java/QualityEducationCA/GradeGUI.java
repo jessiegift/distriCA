@@ -60,9 +60,6 @@ public class GradeGUI extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         SubmitButton = new javax.swing.JButton();
-        Gradereportcheckbox = new javax.swing.JCheckBox();
-        CareerPathCheckbox = new javax.swing.JCheckBox();
-        subjectservicecheckbox = new javax.swing.JCheckBox();
         Studfield = new javax.swing.JTextField();
 
         jButton1.setText("jButton1");
@@ -105,27 +102,6 @@ public class GradeGUI extends javax.swing.JFrame {
             }
         });
 
-        Gradereportcheckbox.setText("Grade Report");
-        Gradereportcheckbox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                GradereportcheckboxActionPerformed(evt);
-            }
-        });
-
-        CareerPathCheckbox.setText("Career Path");
-        CareerPathCheckbox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CareerPathCheckboxActionPerformed(evt);
-            }
-        });
-
-        subjectservicecheckbox.setText("Subject Service");
-        subjectservicecheckbox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                subjectservicecheckboxActionPerformed(evt);
-            }
-        });
-
         Studfield.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 StudfieldActionPerformed(evt);
@@ -141,52 +117,38 @@ public class GradeGUI extends javax.swing.JFrame {
                 .addComponent(AppLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
                 .addGap(131, 131, 131))
             .addGroup(layout.createSequentialGroup()
-                .addGap(203, 203, 203)
-                .addComponent(ChooseserviceLabel)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addComponent(Gradereportcheckbox, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(29, 198, Short.MAX_VALUE)
+                        .addComponent(SubmitButton)
+                        .addGap(156, 156, 156))
+                    .addGroup(layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(StudentNameLabel)
-                        .addGap(25, 25, 25)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(SubmitButton, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(CareerPathCheckbox, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(54, 54, 54)
-                        .addComponent(subjectservicecheckbox))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(Studfield, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(StudentNameLabel)
+                            .addComponent(Studfield, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(26, 26, 26))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(107, 107, 107))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(203, 203, 203)
+                .addComponent(ChooseserviceLabel)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(AppLabel)
-                .addGap(38, 38, 38)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(StudentNameLabel)
-                    .addComponent(Studfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(StudentNameLabel)
+                .addGap(4, 4, 4)
+                .addComponent(Studfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34)
                 .addComponent(ChooseserviceLabel)
-                .addGap(16, 16, 16)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Gradereportcheckbox)
-                    .addComponent(CareerPathCheckbox)
-                    .addComponent(subjectservicecheckbox))
-                .addGap(32, 32, 32)
+                .addGap(68, 68, 68)
                 .addComponent(SubmitButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -199,37 +161,6 @@ public class GradeGUI extends javax.swing.JFrame {
     private void textField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textField1ActionPerformed
-
-    private void GradereportcheckboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GradereportcheckboxActionPerformed
-        // TODO add your handling code here:if (gradeReportCheckBox.isSelected()) {
-        
-       String studentName = Studfield.getText().trim();
-
-        if (studentName.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Please enter student name.");
-            return;
-        }
-
-        // gRPC call
-        ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 50051)
-            .usePlaintext()
-            .build();
-
-        GradeReportServiceGrpc.GradeReportServiceBlockingStub stub = GradeReportServiceGrpc.newBlockingStub(channel);
-
-        GradeReportRequest request = GradeReportRequest.newBuilder()
-            .setStudentName(studentName)
-            .build();
-
-        try {
-            GradeReportResponse response = stub.getGradeReport(request);
-            jTextArea1.setText("Grade: " + response.getGrade());
-        } catch (Exception e) {
-           jTextArea1.setText("Error: " + e.getMessage());
-        } finally {
-            channel.shutdown();
-        }
-    }//GEN-LAST:event_GradereportcheckboxActionPerformed
 
     private void SubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubmitButtonActionPerformed
         // TODO add your handling code here:
@@ -273,69 +204,6 @@ public class GradeGUI extends javax.swing.JFrame {
                 
     }//GEN-LAST:event_SubmitButtonActionPerformed
 
-    private void CareerPathCheckboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CareerPathCheckboxActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_CareerPathCheckboxActionPerformed
-
-    private void subjectservicecheckboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subjectservicecheckboxActionPerformed
-        // TODO add your handling code here:
-       if (subjectservicecheckbox.isSelected()) {
-    try {
-        String studentName = JOptionPane.showInputDialog("Enter Student Name:");
-        String subject = JOptionPane.showInputDialog("Enter Subject:");
-        String quizName = JOptionPane.showInputDialog("Enter Quiz Name:");
-        int score = Integer.parseInt(JOptionPane.showInputDialog("Enter Score:"));
-
-        ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 50051)
-                .usePlaintext()
-                .build();
-
-        SubjectServiceGrpc.SubjectServiceStub asyncStub = SubjectServiceGrpc.newStub(channel);
-
-        // Get the request observer to send SubjectPerformance messages
-        StreamObserver<SubjectPerformance> requestObserver = asyncStub.monitorSubjectPerformance(new StreamObserver<SubjectFeedback>() {
-            @Override
-            public void onNext(SubjectFeedback feedback) {
-                JOptionPane.showMessageDialog(null,
-                        "Progress: " + feedback.getProgressTracking() +
-                        "\nResources: " + feedback.getResourceRecommendation() +
-                        "\nTips: " + feedback.getPersonalizedTips() +
-                        "\nAdvisory: " + feedback.getAdvisory());
-            }
-
-            @Override
-            public void onError(Throwable t) {
-                JOptionPane.showMessageDialog(null, "Error: " + t.getMessage());
-            }
-
-            @Override
-            public void onCompleted() {
-                try {
-                    channel.shutdown().awaitTermination(3, java.util.concurrent.TimeUnit.SECONDS);
-                } catch (InterruptedException e) {
-                    Thread.currentThread().interrupt();
-                }
-            }
-        });
-
-        // Now send your SubjectPerformance message
-        requestObserver.onNext(SubjectPerformance.newBuilder()
-                .setStudentName(studentName)
-                .setSubject(subject)
-                .setQuizName(quizName)
-                .setSubjectScore(score)
-                .build());
-
-        // Signal that you're done sending messages
-        requestObserver.onCompleted();
-
-    } catch (Exception e) {
-        JOptionPane.showMessageDialog(null, "Invalid input. Please try again.");
-    }
-}
-    }//GEN-LAST:event_subjectservicecheckboxActionPerformed
-
     private void StudfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StudfieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_StudfieldActionPerformed
@@ -377,9 +245,7 @@ public class GradeGUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel AppLabel;
-    private javax.swing.JCheckBox CareerPathCheckbox;
     private javax.swing.JLabel ChooseserviceLabel;
-    private javax.swing.JCheckBox Gradereportcheckbox;
     private javax.swing.JLabel StudentNameLabel;
     private javax.swing.JTextField Studfield;
     private javax.swing.JButton SubmitButton;
@@ -393,7 +259,6 @@ public class GradeGUI extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     private java.awt.List list1;
-    private javax.swing.JCheckBox subjectservicecheckbox;
     private java.awt.TextField textField1;
     // End of variables declaration//GEN-END:variables
 }

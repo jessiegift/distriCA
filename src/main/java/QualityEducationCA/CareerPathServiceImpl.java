@@ -42,8 +42,10 @@ public class CareerPathServiceImpl extends CareerPathServiceImplBase {
             } else if (subject.equalsIgnoreCase("Literature") && score >= 80) {
                 careerSuggestion = "Writer";
             } else {
-                careerSuggestion = "General Studies";
+                careerSuggestion = "part-time worker";
             }
+            
+            
 
             CareerPathResponse careerresponse = CareerPathResponse.newBuilder()
                     .setCareerPath(careerSuggestion)

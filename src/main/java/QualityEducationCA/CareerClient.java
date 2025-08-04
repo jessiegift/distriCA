@@ -70,7 +70,7 @@ public class CareerClient {
         SubjectGrade mathGrade = SubjectGrade.newBuilder().setSubject("Mathematics").setScore(85).build();
         SubjectGrade bioGrade = SubjectGrade.newBuilder().setSubject("Biology").setScore(75).build();
 
-        client.suggestCareerPaths("John Doe", java.util.List.of(mathGrade, bioGrade));
+        client.suggestCareerPaths("Joy joy", java.util.List.of(mathGrade, bioGrade));
 
         channel.shutdownNow();
     }
