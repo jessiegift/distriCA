@@ -16,12 +16,11 @@
     import generated.grpc.Subject.SubjectPerformance;
     import generated.grpc.Subject.SubjectImpl;
     import generated.grpc.Subject.SubjectServiceGrpc;
-
 /**
  *
  * @author Onyinye
  */
-public class QualityEduClient {
+public class SubjectClient {
     public static void main(String[] args) throws InterruptedException {
         ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 50051)
                 .usePlaintext()
